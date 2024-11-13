@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentari - Mental Wellness App</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+        }
+
+        .navbar nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .btn-get-started {
+            padding: 8px 16px;
+            border: 2px solid #5a33a1;
+            color: #5a33a1;
+            background: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2em;
+            background-color: #f9f9f9;
+        }
+
+        .hero-content {
+            max-width: 500px;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .hero p {
+            margin: 1em 0;
+        }
+
+        .btn-primary {
+            padding: 10px 20px;
+            background-color: #5a33a1;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero-icon {
+            width: 400px;
+        }
+
+        .features {
+            text-align: center;
+            padding: 2em;
+            background-color: #ffffff;
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            margin-top: 3em;
+        }
+
+        .feature-item {
+            max-width: 300px;
+        }
+
+        .btn-secondary {
+            padding: 10px 20px;
+            border: 2px solid #5a33a1;
+            color: #5a33a1;
+            background: none;
+            cursor: pointer;
+        }
+
+        .cta {
+            background-color: #5a33a1;
+            color: white;
+            text-align: center;
+            padding: 2em;
+            font-size: 24px;
+        }
+
+        .testimonials {
+            text-align: center;
+            padding: 2em;
+            background-color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #f4f4f4;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+            max-height: 50px;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Mentari</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <!-- <a href="#subscription">Subscription</a> -->
+                <a href="#community">Community</a>
+                <button class="btn-get-started">Get Started</button>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Mentari</h2>
+            <p>A mobile app designed to support mental wellness through daily challenges that inspire positive habits
+                and boost mental clarity.</p>
+            <button class="btn-primary">Join Now</button>
+            <p>Start your journey towards mental wellness today.</p>
+        </div>
+        <img src="https://png.pngtree.com/png-clipart/20211017/original/pngtree-mental-health-problems-flat-illustration-green-png-image_6855446.png"
+            alt="Mental Wellness Icon" class="hero-icon">
+    </section>
+
+    <section id="features" class="features">
+        <h2>Features</h2>
+        <p>Explore the unique features of Mentari.</p>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <h3>Daily Wellness Challenges</h3>
+                <p>Start each day with a new task to nurture mental health.</p>
+                <!-- <a href="#">Learn More →</a> -->
+            </div>
+            <div class="feature-item">
+                <h3>Community & Sharing</h3>
+                <p>Connect with others by sharing your completed challenges and viewing others' journeys.</p>
+                <!-- <a href="#">Join Community →</a> -->
+            </div>
+            <div class="feature-item">
+                <h3>Progress Tracking</h3>
+                <p>Earn points (XP), build streaks, and track your growth over time.</p>
+                <!-- <a href="#">Track Progress →</a> -->
+            </div>
+        </div>
+        <!-- <button class="btn-secondary">Start Your Journey</button> -->
+    </section>
+
+    <section class="cta">
+        <h2>Ready to start your wellness journey?</h2>
+        <p>Join Mentari today and start building positive habits for a healthier life.</p>
+    </section>
+
+    <section id="community" class="testimonials">
+        <h2>What Our Users Say</h2>
+        <p>Hear from our community about their experiences with Mentari.</p>
+        <!-- <button class="btn-primary">Join Our Community</button> -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/mentari.app/"><img
+                    src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-48.png"
+                    alt="Instagram"></a>
+            <a href="https://www.linkedin.com/company/mentari-app"><img
+                    src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Linkedin2_svg-48.png"
+                    alt="LinkedIn"></a>
+            <a href="https://www.tiktok.com/@mentari.app"><img src="https://cdn0.iconfinder.com/data/icons/logos-brands-7/512/TikTok_logo_app0-48.png"
+                    alt="TikTok"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Mentari</p>
+    </footer>
+
+</body>
+
+</html>
