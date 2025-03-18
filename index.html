@@ -5,131 +5,554 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentari - Mental Wellness App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://mentaridevsite.blob.core.windows.net/public/images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #8ab661;
+            --secondary-color: #9bc97c;
+            --accent-color: #f8a062;
+            --light-bg: #f9f9f9;
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --gray-text: #777777;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
             line-height: 1.6;
+            color: var(--dark-text);
+            overflow-x: hidden;
         }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1em;
+            padding: 1.2em 2em;
             background-color: white;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .navbar h1 {
-            font-size: 24px;
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .motto {
+            font-size: 14px;
+            font-weight: 500;
+            color: #999 ;
+            margin-top: -5px;
+            /* margin-left: 5px; */
+            font-style: italic;
+        }
+
+        .navbar nav {
+            display: flex;
+            align-items: center;
         }
 
         .navbar nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            color: black;
-            font-weight: bold;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-get-started {
-            padding: 8px 16px;
-            border: 2px solid #5a33a1;
-            color: #5a33a1;
-            background: none;
+            padding: 12px 28px;
+            border: none;
+            color: white;
+            background-color: var(--primary-color);
+            border-radius: 50px;
             cursor: pointer;
-            font-weight: bold;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
 
+        .btn-get-started:hover {
+            background-color: #769e52;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(138, 182, 97, 0.3);
+        }
+
+        /* Hero Section */
         .hero {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2em;
-            background-color: #f9f9f9;
+            padding: 5em 2em;
+            background: linear-gradient(135deg, #f9f9f9 0%, #e8f0e0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(138, 182, 97, 0.05);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+            z-index: 0;
         }
 
         .hero-content {
-            max-width: 500px;
+            max-width: 550px;
+            position: relative;
+            z-index: 1;
         }
 
-        .hero h2 {
-            font-size: 36px;
-            color: #333;
+        .hero h1 {
+            font-size: 48px;
+            color: var(--dark-text);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
         }
 
         .hero p {
-            margin: 1em 0;
+            margin: 1.5em 0;
+            font-size: 18px;
+            color: var(--gray-text);
+        }
+
+        .free-badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 20px;
         }
 
         .btn-primary {
-            padding: 10px 20px;
-            background-color: #5a33a1;
+            background-color: var(--primary-color);
             color: white;
-            border: none;
-            cursor: pointer;
+            padding: 12px 32px;
+            margin-right: 15px;
         }
 
-        .hero-icon {
-            width: 400px;
+        .btn-primary:hover {
+            background-color: #769e52;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(138, 182, 97, 0.3);
         }
 
+        .btn-secondary {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+            padding: 12px 32px;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(138, 182, 97, 0.3);
+        }
+
+        .app-badges {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .badge-link {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .badge-link:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-image {
+            width: 50%;
+            max-width: 500px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.1));
+        }
+
+        /* Features Section */
         .features {
             text-align: center;
-            padding: 2em;
-            background-color: #ffffff;
+            padding: 5em 2em;
+            background-color: white;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: var(--dark-text);
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gray-text);
+            margin-bottom: 50px;
         }
 
         .features-grid {
-            display: flex;
-            justify-content: center;
-            gap: 2em;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 3em;
         }
 
         .feature-item {
-            max-width: 300px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .btn-secondary {
-            padding: 10px 20px;
-            border: 2px solid #5a33a1;
-            color: #5a33a1;
-            background: none;
-            cursor: pointer;
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
-        .cta {
-            background-color: #5a33a1;
-            color: white;
-            text-align: center;
-            padding: 2em;
-            font-size: 24px;
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(138, 182, 97, 0.1);
+            border-radius: 50%;
         }
 
+        .feature-icon img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .feature-item h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark-text);
+        }
+
+        .feature-item p {
+            color: var(--gray-text);
+        }
+
+        .feature-item-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Testimonials Section */
         .testimonials {
             text-align: center;
-            padding: 2em;
-            background-color: #ffffff;
+            padding: 5em 2em;
+            background-color: var(--light-bg);
         }
 
-        footer {
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 3em 0;
+        }
+
+        .testimonial-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .testimonial-item::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 60px;
+            color: rgba(138, 182, 97, 0.1);
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--gray-text);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+
+        .author-info h4 {
+            margin: 0;
+            color: var(--dark-text);
+        }
+
+        .author-info p {
+            margin: 0;
+            color: var(--gray-text);
+            font-size: 14px;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
             text-align: center;
-            padding: 1em;
-            background-color: #f4f4f4;
+            padding: 5em 2em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            bottom: -100px;
+            left: -100px;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-light {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 32px;
+        }
+
+        .btn-light:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Community Section */
+        .community {
+            text-align: center;
+            padding: 5em 2em;
+            background-color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .social-icons a {
-            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2em;
+            background-color: white;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: var(--gray-text);
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Premium Badge */
+        .premium-badge {
             display: inline-block;
-            max-height: 50px;
-            padding: 1em;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 3em 1em;
+            }
+
+            .hero-content {
+                max-width: 100%;
+                margin-bottom: 2em;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .app-badges {
+                justify-content: center;
+            }
+
+            .hero-image {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .features-grid,
+            .testimonials-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1em;
+            }
+
+            .navbar nav {
+                margin-top: 1em;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .navbar nav a {
+                margin: 0.5em;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .feature-item,
+            .testimonial-item {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -137,78 +560,207 @@
 <body>
     <header>
         <div class="navbar">
-            <h1>Mentari</h1>
+            <div class="logo">
+                <img src="https://mentaridevsite.blob.core.windows.net/public/images/logo.png" alt="Mentari Logo">
+                <div>
+                    Mentari
+                    <div class="motto">Small Challenges, Big Change</div>
+                </div>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
             <nav>
                 <a href="#home">Home</a>
                 <a href="#features">Features</a>
-                <!-- <a href="#subscription">Subscription</a> -->
+                <a href="#stories">Success Stories</a>
                 <a href="#community">Community</a>
                 <button class="btn-get-started">Get Started</button>
             </nav>
         </div>
+        <style>
+            .hamburger-menu {
+                display: none;
+                flex-direction: column;
+                cursor: pointer;
+                z-index: 1001;
+            }
+            
+            .bar {
+                width: 25px;
+                height: 3px;
+                background-color: var(--dark-text);
+                margin: 3px 0;
+                transition: 0.4s;
+            }
+            
+            @media (max-width: 768px) {
+                .hamburger-menu {
+                    display: flex;
+                }
+                
+                .navbar nav {
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    width: 250px;
+                    height: 100vh;
+                    background-color: white;
+                    flex-direction: column;
+                    padding: 80px 20px 20px;
+                    transition: 0.5s;
+                    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                }
+                
+                .navbar nav.active {
+                    right: 0;
+                }
+            }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburger = document.querySelector('.hamburger-menu');
+                const nav = document.querySelector('.navbar nav');
+                
+                hamburger.addEventListener('click', function() {
+                    nav.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                });
+            });
+        </script>
     </header>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h2>Welcome to Mentari</h2>
-            <p>A mobile app designed to support mental wellness through daily challenges that inspire positive habits
-                and boost mental clarity.</p>
-            <button class="btn-primary">Join Now</button>
-            <p>Start your journey towards mental wellness today.</p>
+            <h1>Transform Your <span>Mental Wellness</span> Journey</h1>
+            <p>Mentari helps you build positive mental habits through daily challenges, community support, and progress tracking designed to boost your mental clarity and wellbeing.</p>
+            <!-- <div class="free-badge">100% Free</div> -->
+            <!-- <div>
+                <a href="#download" class="btn btn-primary">Download Now</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div> -->
+            <div class="app-badges">
+                <a href="#" class="badge-link">
+                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" class="app-badge" style="height: 50px;">
+                </a>
+                <a href="#" class="badge-link">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="app-badge" style="height: 75px; padding-bottom: 10px;">
+                </a>
+            </div>
         </div>
-        <img src="https://png.pngtree.com/png-clipart/20211017/original/pngtree-mental-health-problems-flat-illustration-green-png-image_6855446.png"
-            alt="Mental Wellness Icon" class="hero-icon">
+        <div class="hero-image">
+            <img src="https://png.pngtree.com/png-clipart/20211017/original/pngtree-mental-health-problems-flat-illustration-green-png-image_6855446.png" alt="Mentari App Interface">
+        </div>
     </section>
 
     <section id="features" class="features">
-        <h2>Features</h2>
-        <p>Explore the unique features of Mentari.</p>
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <p class="section-subtitle">Discover what makes Mentari special - completely free, now and always</p>
 
-        <div class="features-grid">
-            <div class="feature-item">
-                <h3>Daily Wellness Challenges</h3>
-                <p>Start each day with a new task to nurture mental health.</p>
-                <!-- <a href="#">Learn More →</a> -->
-            </div>
-            <div class="feature-item">
-                <h3>Community & Sharing</h3>
-                <p>Connect with others by sharing your completed challenges and viewing others' journeys.</p>
-                <!-- <a href="#">Join Community →</a> -->
-            </div>
-            <div class="feature-item">
-                <h3>Progress Tracking</h3>
-                <p>Earn points (XP), build streaks, and track your growth over time.</p>
-                <!-- <a href="#">Track Progress →</a> -->
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="https://img.icons8.com/fluency/48/000000/task.png" alt="Daily Challenge Icon">
+                    </div>
+                    <h3>Daily Challenges</h3>
+                    <p>Start each day with personalized mindfulness, physical, and mental wellness tasks. From deep breathing to brief walks, our challenges are designed to fit into your busy schedule.</p>
+                    <span class="premium-badge">Personalized</span>
+                    <span class="premium-badge">Challenges</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="https://img.icons8.com/fluency/48/000000/conference-call.png" alt="Community Icon">
+                    </div>
+                    <h3>Community & Sharing</h3>
+                    <p>Share your achievements with friends, celebrate completions, and build a supportive community. Add images to your posts and connect with like-minded individuals on their wellness journey.</p>
+                    <span class="premium-badge">Share</span>
+                    <span class="premium-badge">Community</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="https://img.icons8.com/?size=100&id=CnsAhdkyB9wu&format=png&color=000000" alt="Progress Icon">
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Visualize your journey with calendar streaks, XP points, and completion records. Watch your progress grow as you build positive habits day by day. Set reminders to stay consistent.</p>
+                    <span class="premium-badge">Track</span>
+                    <span class="premium-badge">Insights</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="https://img.icons8.com/fluency/48/000000/document.png" alt="Resources Icon">
+                    </div>
+                    <h3>Useful Resources</h3>
+                    <p>Each challenge includes helpful resources like articles, videos, books and audio guidance to help you understand and maximize the benefits of your daily wellness activities.</p>
+                    <span class="premium-badge">Additional</span>
+                    <span class="premium-badge">Resources</span>
+                </div>
             </div>
         </div>
-        <!-- <button class="btn-secondary">Start Your Journey</button> -->
     </section>
 
-    <section class="cta">
-        <h2>Ready to start your wellness journey?</h2>
-        <p>Join Mentari today and start building positive habits for a healthier life.</p>
+    <section id="stories" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-subtitle">Real people, real transformation</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <p class="testimonial-text">I was down on myself when I went for a walk and challenged myself to step out of my comfort zone. I forced myself to do 10 pushups right there on the street. Those pushups changed my whole perspective, and I've been consistently challenging myself ever since.</p>
+                </div>
+                
+                <div class="testimonial-item">
+                    <p class="testimonial-text">I didn't want to quit smoking, but then this simple app challenged me to stop for just a single day. I did it, and without noticing, I quit completely - it's been 6 months now! The daily challenges were exactly what I needed.</p>
+                </div>
+                
+                <div class="testimonial-item">
+                    <p class="testimonial-text">The mindfulness challenges helped me find peace during a really stressful period in my life. I knew about some of these techniques but the application helped me practice them thanks to the provided resources.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="community" class="testimonials">
-        <h2>What Our Users Say</h2>
-        <p>Hear from our community about their experiences with Mentari.</p>
-        <!-- <button class="btn-primary">Join Our Community</button> -->
-        <div class="social-icons">
-            <a href="https://www.instagram.com/mentari.app/"><img
-                    src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-48.png"
-                    alt="Instagram"></a>
-            <a href="https://www.linkedin.com/company/mentari-app"><img
-                    src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Linkedin2_svg-48.png"
-                    alt="LinkedIn"></a>
-            <a href="https://www.tiktok.com/@mentari.app"><img src="https://cdn0.iconfinder.com/data/icons/logos-brands-7/512/TikTok_logo_app0-48.png"
-                    alt="TikTok"></a>
+    <section id="download" class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Mental Wellness?</h2>
+            <p>Join the users who have already started their journey to better mental health with Mentari. The app is completely free and will remain free forever - we believe mental wellness should be accessible to everyone.</p>
+            <p style="margin-bottom: 30px; font-size: 24px; font-weight: 600;">Small Challenges, Big Change</p>
+            <!-- <a href="#" class="btn btn-light">Download the App</a> -->
+        </div>
+    </section>
+
+    <section id="community" class="community">
+        <div class="container">
+            <h2 class="section-title">Join Our Community</h2>
+            <p class="section-subtitle">Follow us on social media to stay updated and connect with other users</p>
+            
+            <div class="social-icons">
+                <a href="https://www.instagram.com/mentari.app/" aria-label="Instagram">
+                    <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-48.png" alt="Instagram">
+                </a>
+                <!-- Nothing interesting here
+                 <a href="https://www.linkedin.com/company/mentari-app" aria-label="LinkedIn">
+                    <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Linkedin2_svg-48.png" alt="LinkedIn">
+                </a> -->
+                <a href="https://www.tiktok.com/@mentari.app" aria-label="TikTok">
+                    <img src="https://cdn0.iconfinder.com/data/icons/logos-brands-7/512/TikTok_logo_app0-48.png" alt="TikTok">
+                </a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 Mentari</p>
+        <div class="container">
+            <div class="footer-links">
+                <a href="terms_and_conditions.html">Terms of Service</a>
+                <a href="privacy_policy.html">Privacy Policy</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <p>© 2024 Mentari. All rights reserved.</p>
+        </div>
     </footer>
-
 </body>
 
 </html>
