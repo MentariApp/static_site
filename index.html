@@ -4,11 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentari - Mental Wellness App</title>
+    <title>Mentari - Daily Mental Wellness App for Mindfulness & Habit Building</title>
+    <meta name="description" content="Mentari is a free mental wellness app that helps you build better habits, boost clarity, and improve your mood with daily challenges. Join the community and start your journey today!">
+    <meta name="keywords" content="mental wellness app, mindfulness challenges, daily wellness, habit tracker, mental health, free wellness app, self-care, mental clarity, community support, mental fitness">
+    <meta name="author" content="Mentari Team">
+    <link rel="canonical" href="https://www.mentari.app/">
     <link rel="icon" href="https://mentaridevsite.blob.core.windows.net/public/images/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Mentari - Mental Wellness Through Daily Challenges">
+    <meta property="og:description" content="Discover Mentari, the free mental health app with daily wellness tasks, habit tracking, and a supportive community. Small challenges. Big change.">
+    <meta property="og:image" content="https://mentaridevsite.blob.core.windows.net/public/images/logo.png">
+    <meta property="og:url" content="https://www.mentari.app/">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mentari - Free Mental Wellness App">
+    <meta name="twitter:description" content="Build mindfulness habits and track your progress with Mentari. Daily tasks. Community support. 100% free.">
+    <meta name="twitter:image" content="https://mentaridevsite.blob.core.windows.net/public/images/logo.png">
     <style>
         :root {
             --primary-color: #8ab661;
@@ -555,13 +570,19 @@
             }
         }
     </style>
+    <script>
+        // App Store Links
+        const APP_STORE_LINK = "#download-app-store"; // Replace with your App Store link
+        const GOOGLE_PLAY_LINK = "#download-google-play"; // Replace with your Google Play link
+    </script>
 </head>
 
 <body>
+    <!-- Updated Content with Keyword Optimization -->
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="https://mentaridevsite.blob.core.windows.net/public/images/logo.png" alt="Mentari Logo">
+                <img src="https://mentaridevsite.blob.core.windows.net/public/images/logo.png" alt="Mentari Mental Wellness App Logo">
                 <div>
                     Mentari
                     <div class="motto">Small Challenges, Big Change</div>
@@ -577,7 +598,9 @@
                 <a href="#features">Features</a>
                 <a href="#stories">Success Stories</a>
                 <a href="#community">Community</a>
-                <button class="btn-get-started">Get Started</button>
+                <a href="#download">
+                    <button class="btn-get-started" aria-label="Download the Mentari App">Get Started</button>
+                </a>
             </nav>
         </div>
         <style>
@@ -634,68 +657,63 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Transform Your <span>Mental Wellness</span> Journey</h1>
-            <p>Mentari helps you build positive mental habits through daily challenges, community support, and progress tracking designed to boost your mental clarity and wellbeing.</p>
-            <!-- <div class="free-badge">100% Free</div> -->
-            <!-- <div>
-                <a href="#download" class="btn btn-primary">Download Now</a>
-                <a href="#features" class="btn btn-secondary">Learn More</a>
-            </div> -->
+            <h1><strong>Boost Your Mental Health</strong> with <span>Daily Wellness Challenges</span></h1>
+            <p>Mentari is the free mental wellness app that helps you build better habits, reduce stress, and improve clarity with fun, bite-sized tasks. Designed for real life, backed by community support.</p>
             <div class="app-badges">
-                <a href="#" class="badge-link">
-                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" class="app-badge" style="height: 50px;">
+                <a href="javascript:void(0)" onclick="window.location.href=APP_STORE_LINK" class="badge-link" aria-label="Download Mentari on the App Store">
+                    <img src="./images/apple-download-button.png" alt="Download on the App Store" class="app-badge" style="height: 50px;">
                 </a>
-                <a href="#" class="badge-link">
-                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="app-badge" style="height: 75px; padding-bottom: 10px;">
+                <a href="javascript:void(0)" onclick="window.location.href=GOOGLE_PLAY_LINK" class="badge-link" aria-label="Download Mentari on Google Play">
+                    <img src="./images/google-download-button.png" alt="Get it on Google Play" class="app-badge" style="height: 50px;">
                 </a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="https://png.pngtree.com/png-clipart/20211017/original/pngtree-mental-health-problems-flat-illustration-green-png-image_6855446.png" alt="Mentari App Interface">
+            <img src="https://png.pngtree.com/png-clipart/20211017/original/pngtree-mental-health-problems-flat-illustration-green-png-image_6855446.png" alt="Illustration representing mental clarity and mindfulness">
         </div>
     </section>
 
     <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">Key Features</h2>
-            <p class="section-subtitle">Discover what makes Mentari special - completely free, now and always</p>
+            <h2 class="section-title">Why Choose Mentari?</h2>
+            <p class="section-subtitle">A Free Wellness App to Build Habits, Track Progress, and Stay Motivated</p>
 
             <div class="features-grid">
                 <div class="feature-item">
                     <div class="feature-icon">
                         <img src="https://img.icons8.com/fluency/48/000000/task.png" alt="Daily Challenge Icon">
                     </div>
-                    <h3>Daily Challenges</h3>
-                    <p>Start each day with personalized mindfulness, physical, and mental wellness tasks. From deep breathing to brief walks, our challenges are designed to fit into your busy schedule.</p>
-                    <span class="premium-badge">Personalized</span>
-                    <span class="premium-badge">Challenges</span>
+                    <h3>Daily Mental Wellness Challenges</h3>
+                    <p>Short, simple activities to reduce stress, increase positivity, and promote mindfulness. Choose tasks that fit your goals and energy.</p>
+                    <span class="premium-badge">Mindfulness</span>
+                    <span class="premium-badge">Healthy Habits</span>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">
                         <img src="https://img.icons8.com/fluency/48/000000/conference-call.png" alt="Community Icon">
                     </div>
-                    <h3>Community & Sharing</h3>
-                    <p>Share your achievements with friends, celebrate completions, and build a supportive community. Add images to your posts and connect with like-minded individuals on their wellness journey.</p>
-                    <span class="premium-badge">Share</span>
-                    <span class="premium-badge">Community</span>
+                    <h3>Community Support</h3>
+                    <p>Celebrate wins with others, share completed challenges, and stay encouraged by seeing progress from like-minded people.</p>
+                    <span class="premium-badge">Motivation</span>
+                    <span class="premium-badge">Connection</span>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">
                         <img src="https://img.icons8.com/?size=100&id=CnsAhdkyB9wu&format=png&color=000000" alt="Progress Icon">
                     </div>
-                    <h3>Progress Tracking</h3>
-                    <p>Visualize your journey with calendar streaks, XP points, and completion records. Watch your progress grow as you build positive habits day by day. Set reminders to stay consistent.</p>
-                    <span class="premium-badge">Track</span>
-                    <span class="premium-badge">Insights</span>
+                    <h3>Track Your Mental Fitness</h3>
+                    <p>Visual tools like XP points, streak counters, and challenge history help you stay consistent and proud of your personal growth.</p>
+                    <span class="premium-badge">Progress</span>
+                    <span class="premium-badge">Consistency</span>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">
                         <img src="https://img.icons8.com/fluency/48/000000/document.png" alt="Resources Icon">
                     </div>
-                    <h3>Useful Resources</h3>
-                    <p>Each challenge includes helpful resources like articles, videos, books and audio guidance to help you understand and maximize the benefits of your daily wellness activities.</p>
-                    <span class="premium-badge">Additional</span>
-                    <span class="premium-badge">Resources</span>
+                    <h3>Helpful Guided Resources</h3>
+                    <p>Access articles, audio clips, expert tips, and more. Learn why each task works and how to make the most of your mental wellness practice.</p>
+                    <span class="premium-badge">Guidance</span>
+                    <span class="premium-badge">Learning</span>
                 </div>
             </div>
         </div>
@@ -704,19 +722,17 @@
     <section id="stories" class="testimonials">
         <div class="container">
             <h2 class="section-title">Success Stories</h2>
-            <p class="section-subtitle">Real people, real transformation</p>
-            
+            <p class="section-subtitle">See how Mentari helps people like you feel better, think clearer, and live happier</p>
+
             <div class="testimonials-grid">
                 <div class="testimonial-item">
-                    <p class="testimonial-text">I was down on myself when I went for a walk and challenged myself to step out of my comfort zone. I forced myself to do 10 pushups right there on the street. Those pushups changed my whole perspective, and I've been consistently challenging myself ever since.</p>
+                    <p class="testimonial-text">I was feeling low until I took on a challenge to do 10 pushups in the street. It sounded silly, but that moment shifted something in me. I've been chasing that feeling every day since. Thank you, Mentari.</p>
                 </div>
-                
                 <div class="testimonial-item">
-                    <p class="testimonial-text">I didn't want to quit smoking, but then this simple app challenged me to stop for just a single day. I did it, and without noticing, I quit completely - it's been 6 months now! The daily challenges were exactly what I needed.</p>
+                    <p class="testimonial-text">I never thought I could quit smoking. But one small challenge led to another, and now I've been smoke-free for six months. This app saved my life.</p>
                 </div>
-                
                 <div class="testimonial-item">
-                    <p class="testimonial-text">The mindfulness challenges helped me find peace during a really stressful period in my life. I knew about some of these techniques but the application helped me practice them thanks to the provided resources.</p>
+                    <p class="testimonial-text">The guided mindfulness tasks brought me calm during chaos. I knew the theory, but Mentari gave me the nudge to actually *do* the things that helped.</p>
                 </div>
             </div>
         </div>
@@ -724,28 +740,30 @@
 
     <section id="download" class="cta">
         <div class="container">
-            <h2>Ready to Transform Your Mental Wellness?</h2>
-            <p>Join the users who have already started their journey to better mental health with Mentari. The app is completely free and will remain free forever - we believe mental wellness should be accessible to everyone.</p>
-            <p style="margin-bottom: 30px; font-size: 24px; font-weight: 600;">Small Challenges, Big Change</p>
-            <!-- <a href="#" class="btn btn-light">Download the App</a> -->
+            <h2>Download Mentari - Start Your Mental Wellness Journey Today</h2>
+            <p>It's 100% free. No ads. Just daily mental wellness support that fits your life.</p>
+            <p style="margin-bottom: 30px; font-size: 24px; font-weight: 600;">Available on iOS and Android</p>
+            <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+                <a href="javascript:void(0)" onclick="window.location.href=APP_STORE_LINK" class="btn btn-get-started" aria-label="Download Mentari for iOS">
+                    Download for iOS
+                </a>
+                <a href="javascript:void(0)" onclick="window.location.href=GOOGLE_PLAY_LINK" class="btn btn-get-started" aria-label="Download Mentari for Android">
+                    Download for Android
+                </a>
+            </div>
         </div>
     </section>
 
     <section id="community" class="community">
         <div class="container">
-            <h2 class="section-title">Join Our Community</h2>
-            <p class="section-subtitle">Follow us on social media to stay updated and connect with other users</p>
-            
+            <h2 class="section-title">Join the Mentari Movement</h2>
+            <p class="section-subtitle">Follow us for daily inspiration and community stories</p>
             <div class="social-icons">
-                <a href="https://www.instagram.com/mentari.app/" aria-label="Instagram">
-                    <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-48.png" alt="Instagram">
+                <a href="https://www.instagram.com/mentari.app/" aria-label="Mentari Instagram">
+                    <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-48.png" alt="Follow Mentari on Instagram">
                 </a>
-                <!-- Nothing interesting here
-                 <a href="https://www.linkedin.com/company/mentari-app" aria-label="LinkedIn">
-                    <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Linkedin2_svg-48.png" alt="LinkedIn">
-                </a> -->
-                <a href="https://www.tiktok.com/@mentari.app" aria-label="TikTok">
-                    <img src="https://cdn0.iconfinder.com/data/icons/logos-brands-7/512/TikTok_logo_app0-48.png" alt="TikTok">
+                <a href="https://www.tiktok.com/@mentari.app" aria-label="Mentari TikTok">
+                    <img src="https://cdn0.iconfinder.com/data/icons/logos-brands-7/512/TikTok_logo_app0-48.png" alt="Follow Mentari on TikTok">
                 </a>
             </div>
         </div>
@@ -758,7 +776,7 @@
                 <a href="privacy_policy.html">Privacy Policy</a>
                 <a href="#contact">Contact Us</a>
             </div>
-            <p>© 2024 Mentari. All rights reserved.</p>
+            <p>© 2024 Mentari. All rights reserved. | Your Mental Health App</p>
         </div>
     </footer>
 </body>
