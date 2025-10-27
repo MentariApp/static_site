@@ -380,6 +380,50 @@
             color: var(--primary-color);
         }
 
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animate-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            transition: opacity 0.8s ease-out;
+        }
+
+        .animate-fade-in.animate-visible {
+            opacity: 1;
+        }
+
+        .animate-slide-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+
+        .animate-slide-up.animate-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-delay-3 {
+            transition-delay: 0.3s;
+        }
+
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .navbar {
@@ -434,12 +478,12 @@
     </header>
 
     <section class="research-header">
-        <h1>Why <span>Mentari</span> Matters for Youth Mental Health</h1>
-        <p>Scientific evidence supporting our approach to building resilience and mental wellness through guided challenges</p>
+        <h1 class="animate-fade-in">Why <span>Mentari</span> Matters for Youth Mental Health</h1>
+        <p class="animate-fade-in">Scientific evidence supporting our approach to building resilience and mental wellness through guided challenges</p>
     </section>
 
     <div class="research-content">
-        <div class="research-intro">
+        <div class="research-intro animate-on-scroll">
             <p><strong>Youth mental health has become a growing public health priority</strong>, as large numbers of young people report struggles with anxiety, depression, and related issues. In recent years, mental health challenges among young people have surged to alarming levels. For example, a U.S. survey found that <span class="stat-highlight">2 in 5 high school students</span> reported persistent feelings of sadness or hopelessness in 2023, up from 30% a decade prior<a href="https://www.aecf.org/blog/youth-mental-health-statistics" target="_blank" class="citation" title="Annie E. Casey Foundation">1</a>. Nearly <span class="stat-highlight">1 in 5 adolescents</span> had a major depressive episode in the past year<a href="https://www.aecf.org/blog/youth-mental-health-statistics" target="_blank" class="citation" title="Annie E. Casey Foundation">1</a>.</p>
             
             <p>Across Western countries, youth well-being is in decline – young people in North America and Western Europe have even become less happy than older generations, a historic reversal, prompting warnings from public health leaders that "young people are really struggling"<a href="https://www.theguardian.com/society/2024/mar/20/young-people-becoming-less-happy-than-older-generations-research-shows" target="_blank" class="citation" title="The Guardian">2</a>.</p>
@@ -449,7 +493,7 @@
             <p><strong>This combination of rising distress and unmet needs highlights why a new approach is crucial.</strong> Mentari – a platform designed to encourage personal growth through guided challenges – is poised to help fill this gap by empowering young people to heal and build resilience in their own way.</p>
         </div>
 
-        <div class="research-section">
+        <div class="research-section animate-on-scroll">
             <h2>Youth Mental Health: A Growing Crisis</h2>
             <p>Study after study confirms that youth mental health is facing a crisis. Rapid social and technological changes, academic pressures, and recent global events (like the COVID-19 pandemic) have all taken a toll on young minds<a href="https://www.mdpi.com/2227-9067/12/3/353" target="_blank" class="citation" title="MDPI - Digital Mental Health Interventions">8</a>. Today's teens and young adults report elevated rates of anxiety, depression, and stress-related problems.</p>
             
@@ -473,7 +517,7 @@
             <p><strong>Clearly, innovative solutions are needed</strong> – approaches that meet young people where they are and empower them to improve their well-being on their own terms. This is where Mentari's mission becomes so important. By providing an accessible, engaging way for youths to work on themselves through challenges and goal-setting, Mentari offers a complementary path to healing that can reach those who might never walk into a clinic or ask for a counselor.</p>
         </div>
 
-        <div class="research-section">
+        <div class="research-section animate-on-scroll">
             <h2>The Power of Leaving Your Comfort Zone</h2>
             <p>One of Mentari's core principles is that personal growth and healing come from <strong>stepping outside of one's comfort zone</strong>. The "comfort zone" refers to the realm of familiar routines and minimal stress – a safe but stagnant place. Psychologists have long observed that moderate challenge is essential for growth: a classic 1908 study (the Yerkes-Dodson law) showed that performance and learning improve as we experience some stress or discomfort, up to an optimal point<a href="https://summer.harvard.edu/blog/leaving-your-comfort-zone/" target="_blank" class="citation" title="Harvard Summer School">3</a>.</p>
             
@@ -498,7 +542,7 @@
             <p>By pushing their boundaries, they unlocked higher potential. The takeaway: <strong>stepping beyond the comfort zone sparks personal growth</strong><a href="https://news.cornell.edu/stories/2022/03/leaving-your-comfort-zone-inspires-motivation-growth" target="_blank" class="citation" title="Cornell Chronicle">5</a>, whether it's learning a new skill, advancing in school or work, or simply gaining valuable life experience. Rather than avoiding challenges, embracing them can be deeply rewarding – it propels young people toward their goals and fosters a growth-oriented mindset.</p>
         </div>
 
-        <div class="research-section">
+        <div class="research-section animate-on-scroll">
             <h2>Growth, Resilience, and Mental Well-Being</h2>
             <p>Embracing challenges is closely tied to developing a <strong>growth mindset</strong> – the belief that abilities and traits can be improved with effort. Cultivating this mindset has tangible mental health benefits.</p>
             
@@ -527,7 +571,7 @@
             <p><strong>It's a positive cycle:</strong> challenge → coping → confidence → greater challenge tolerance, and so on. By fostering this cycle, Mentari can help young users develop the kind of mental fortitude that keeps them healthier and happier in the long run<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8500371/" target="_blank" class="citation" title="PMC - Resilience and mental health in youth">7</a>.</p>
         </div>
 
-        <div class="research-section">
+        <div class="research-section animate-on-scroll">
             <h2>How Mentari Helps Young People Grow and Heal</h2>
             <p>Mentari is built on the encouraging findings above: that guided challenges and stepping outside one's comfort zone can be profoundly healing. It translates these insights into an accessible application tailored for young people.</p>
             
@@ -562,7 +606,7 @@
             <p><strong>In short, Mentari not only guides users through challenges – it also changes how they view themselves</strong> (as capable and evolving) and how they view challenges (as doable steps rather than insurmountable problems).</p>
         </div>
 
-        <div class="research-section">
+        <div class="research-section animate-on-scroll">
             <h2>Conclusion</h2>
             <p>Solid scientific evidence underpins Mentari's approach. We know that when young people engage in challenging, growthful activities, they tend to become happier, more confident, and more resilient<a href="https://www.psychologytoday.com/us/blog/lifetime-connections/202405/dont-let-your-comfort-zone-be-a-barrier" target="_blank" class="citation" title="Psychology Today">4</a><a href="https://summer.harvard.edu/blog/leaving-your-comfort-zone/" target="_blank" class="citation" title="Harvard Summer School">3</a>. We also know that fostering resilience and a growth mindset can directly improve mental health outcomes<a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.821206/full" target="_blank" class="citation" title="Frontiers in Psychology">6</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8500371/" target="_blank" class="citation" title="PMC - Resilience and mental health in youth">7</a>.</p>
             
@@ -571,7 +615,7 @@
             <p>In a time when so many young people feel stuck, anxious, or unhappy, Mentari offers a path forward – one small challenge at a time – toward greater healing, growth, and self-discovery. With its foundation in research and its heart in the right place, <strong>Mentari can truly help young minds not just cope, but thrive.</strong></p>
         </div>
 
-        <div class="sources">
+        <div class="sources animate-on-scroll">
             <h2>Research Sources</h2>
             <ul>
                 <li>Annie E. Casey Foundation – <a href="https://www.aecf.org/blog/youth-mental-health-statistics" target="_blank">Youth Mental Health Statistics in 2024</a></li>
@@ -588,7 +632,7 @@
     </div>
 
     <section class="cta-section">
-        <div class="container">
+        <div class="container animate-on-scroll">
             <h2>Ready to Start Your Journey?</h2>
             <p>Join thousands of young people using Mentari to build resilience, confidence, and better mental health through personalized daily challenges.</p>
             <a href="index.html#download" class="btn-light">Download Mentari Free</a>
@@ -620,6 +664,30 @@
                     });
                 }
             });
+        });
+
+        // Scroll animations with Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-visible');
+                    // Optional: stop observing once animated
+                    // observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        // Observe all elements with animation classes
+        const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-fade-in, .animate-slide-up');
+        animatedElements.forEach(element => {
+            observer.observe(element);
         });
     </script>
 </body>

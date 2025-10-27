@@ -657,6 +657,76 @@
             }
         }
 
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animate-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            transition: opacity 0.8s ease-out;
+        }
+
+        .animate-fade-in.animate-visible {
+            opacity: 1;
+        }
+
+        .animate-slide-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+
+        .animate-slide-left.animate-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .animate-slide-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+
+        .animate-slide-right.animate-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .animate-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-scale.animate-visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .stagger-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        .stagger-delay-4 {
+            transition-delay: 0.4s;
+        }
+
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
@@ -903,7 +973,7 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content animate-slide-left">
             <h1><strong>Improve Your Mental Health</strong> with <br> <span>Personalized Daily Challenges</span></h1>
             <p>Mentari is a free mental wellness app that creates personalized challenges based on your goals and preferences. Build better habits, reduce stress, and boost mental clarity with tailored support and guided resources. Share your progress with friends and track your journey.</p>
             <div class="app-badges">
@@ -915,7 +985,7 @@
                 </a>
             </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image animate-slide-right">
             <img src="https://png.pngtree.com/png-clipart/20211017/original/pngtree-mental-health-problems-flat-illustration-green-png-image_6855446.png" alt="Person meditating and achieving mental clarity - Mentari mental wellness app illustration">
         </div>
     </section>
@@ -948,21 +1018,21 @@
     <!-- How It Works Section -->
     <section id="how-it-works" class="how-it-works" style="padding: 5em 2em; background: linear-gradient(135deg, #f9f9f9 0%, #e8f0e0 100%);">
         <div class="container">
-            <h2 class="section-title">How Mentari Works</h2>
-            <p class="section-subtitle">Get started in 3 simple steps and begin your personalized mental wellness journey</p>
+            <h2 class="section-title animate-on-scroll">How Mentari Works</h2>
+            <p class="section-subtitle animate-on-scroll">Get started in 3 simple steps and begin your personalized mental wellness journey</p>
             
             <div class="how-it-works-grid">
-                <div style="text-align: center;">
+                <div style="text-align: center;" class="animate-on-scroll stagger-delay-1">
                     <div style="width: 80px; height: 80px; margin: 0 auto 20px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 36px; font-weight: 700;">1</div>
                     <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--dark-text);">Set Up Your Profile</h3>
                     <p style="color: var(--gray-text);">Download Mentari and create your personalized profile. Tell us about your mental wellness goals and preferences so we can tailor challenges specifically for you.</p>
                 </div>
-                <div style="text-align: center;">
+                <div style="text-align: center;" class="animate-on-scroll stagger-delay-2">
                     <div style="width: 80px; height: 80px; margin: 0 auto 20px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 36px; font-weight: 700;">2</div>
                     <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--dark-text);">Get Personalized Challenges</h3>
                     <p style="color: var(--gray-text);">Receive daily challenges matched to your goals and preferences. Get step-by-step guidance and access helpful resources to dive deeper into each challenge.</p>
                 </div>
-                <div style="text-align: center;">
+                <div style="text-align: center;" class="animate-on-scroll stagger-delay-3">
                     <div style="width: 80px; height: 80px; margin: 0 auto 20px; background-color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 36px; font-weight: 700;">3</div>
                     <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--dark-text);">Share & Track Progress</h3>
                     <p style="color: var(--gray-text);">Complete challenges and share your achievements with friends. Track your progress over time, build streaks, and watch your mental wellness improve.</p>
@@ -973,11 +1043,11 @@
 
     <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">Why Choose Mentari?</h2>
-            <p class="section-subtitle">A Free Wellness App to Build Habits, Track Progress, and Stay Motivated</p>
+            <h2 class="section-title animate-on-scroll">Why Choose Mentari?</h2>
+            <p class="section-subtitle animate-on-scroll">A Free Wellness App to Build Habits, Track Progress, and Stay Motivated</p>
 
             <div class="features-grid">
-                <div class="feature-item">
+                <div class="feature-item animate-scale stagger-delay-1">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 11L12 14L22 4" stroke="#8ab661" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -989,7 +1059,7 @@
                     <span class="premium-badge">Mindfulness</span>
                     <span class="premium-badge">Healthy Habits</span>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item animate-scale stagger-delay-2">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#8ab661" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1003,7 +1073,7 @@
                     <span class="premium-badge">Motivation</span>
                     <span class="premium-badge">Connection</span>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item animate-scale stagger-delay-3">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 20V10" stroke="#8ab661" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1016,7 +1086,7 @@
                     <span class="premium-badge">Progress</span>
                     <span class="premium-badge">Consistency</span>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item animate-scale stagger-delay-4">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20" stroke="#8ab661" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1037,11 +1107,11 @@
 
     <section id="stories" class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Users Are Saying</h2>
-            <p class="section-subtitle">Real feedback from people using Mentari</p>
+            <h2 class="section-title animate-on-scroll">What Users Are Saying</h2>
+            <p class="section-subtitle animate-on-scroll">Real feedback from people using Mentari</p>
 
             <div class="testimonials-grid">
-                <div class="testimonial-item">
+                <div class="testimonial-item animate-on-scroll stagger-delay-1">
                     <p class="testimonial-text">I was in a low mood with no obvious reason, so I went for a walk. On that walk I challenged myself to do 10 push-ups in the street. I was scared but did them anyway - and that small win flipped my day. It showed me how tiny challenges can change how you feel, which is exactly why I built Mentari.</p>
                     <div style="margin-top: 15px; color: var(--accent-color); font-weight: 600; display: flex; align-items: center; gap: 8px;">
                         <span style="display: flex; gap: 2px;">
@@ -1064,7 +1134,7 @@
                         <span>5.0</span>
                     </div>
                 </div>
-                <div class="testimonial-item">
+                <div class="testimonial-item animate-on-scroll stagger-delay-2">
                     <p class="testimonial-text">As someone battling addiction, I never believed I could quit smoking. Mentari's approach with small, manageable mental health challenges made all the difference. Six months smoke-free now! This app genuinely saved my life and improved my mental wellness beyond what I thought possible.</p>
                     <div style="margin-top: 15px; color: var(--accent-color); font-weight: 600; display: flex; align-items: center; gap: 8px;">
                         <span style="display: flex; gap: 2px;">
@@ -1087,7 +1157,7 @@
                         <span>5.0</span>
                     </div>
                 </div>
-                <div class="testimonial-item">
+                <div class="testimonial-item animate-on-scroll stagger-delay-3">
                     <p class="testimonial-text">During my most stressful period, Mentari's guided mindfulness challenges brought peace and mental clarity. I knew the theory of meditation and self-care, but this app gave me the structure and motivation to actually practice daily wellness habits. Best mental health app I've found.</p>
                     <div style="margin-top: 15px; color: var(--accent-color); font-weight: 600; display: flex; align-items: center; gap: 8px;">
                         <span style="display: flex; gap: 2px;">
@@ -1115,7 +1185,7 @@
     </section>
 
     <section id="download" class="cta">
-        <div class="container">
+        <div class="container animate-on-scroll">
             <h2>Download Mentari - Start Your Personalized Wellness Journey Today</h2>
             <p>Free to use with no ads. Create your profile, set your goals, and receive personalized daily challenges with guided support. Share with friends, track your progress, and transform your mental wellness.</p>
             <p style="margin-bottom: 30px; font-size: 24px; font-weight: 600;">Available on iOS (iPhone/iPad) and Android</p>
@@ -1145,46 +1215,46 @@
     <!-- FAQ Section -->
     <section id="faq" class="faq" style="padding: 5em 2em; background-color: white;">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Everything you need to know about Mentari</p>
+            <h2 class="section-title animate-on-scroll">Frequently Asked Questions</h2>
+            <p class="section-subtitle animate-on-scroll">Everything you need to know about Mentari</p>
             
             <div style="max-width: 800px; margin: 3em auto;">
-                <div class="faq-item" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
+                <div class="faq-item animate-on-scroll" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
                     <h3 style="font-size: 20px; margin-bottom: 10px; color: var(--dark-text); font-weight: 600;">What is Mentari and how does it help with mental wellness?</h3>
                     <p style="color: var(--gray-text); line-height: 1.8;">Mentari is a free mental wellness app that provides personalized daily challenges based on your goals and preferences. You'll receive tailored challenges with guided resources to help you build better habits, reduce stress, and improve mental clarity. Share your progress with friends and track your journey to better mental health.</p>
                 </div>
                 
-                <div class="faq-item" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
+                <div class="faq-item animate-on-scroll" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
                     <h3 style="font-size: 20px; margin-bottom: 10px; color: var(--dark-text); font-weight: 600;">Is Mentari free to use?</h3>
                     <p style="color: var(--gray-text); line-height: 1.8;">Yes! Mentari is free to download and use with no ads. We believe mental wellness should be accessible to everyone, so we're keeping the app free as we grow and gather feedback from our community.</p>
                 </div>
                 
-                <div class="faq-item" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
+                <div class="faq-item animate-on-scroll" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
                     <h3 style="font-size: 20px; margin-bottom: 10px; color: var(--dark-text); font-weight: 600;">How do daily challenges work in Mentari?</h3>
                     <p style="color: var(--gray-text); line-height: 1.8;">After setting up your profile with your goals and preferences, Mentari provides personalized daily challenges tailored specifically to you. Each challenge includes guidance to help you complete it and resources to dive deeper. These can include mindfulness exercises, physical activities, journaling prompts, or social connection tasks. Complete them, share with friends, and track your progress over time.</p>
                 </div>
                 
-                <div class="faq-item" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
+                <div class="faq-item animate-on-scroll" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
                     <h3 style="font-size: 20px; margin-bottom: 10px; color: var(--dark-text); font-weight: 600;">What platforms is Mentari available on?</h3>
                     <p style="color: var(--gray-text); line-height: 1.8;">Mentari is available on both iOS (iPhone/iPad) and Android devices. You can download it from the Apple App Store or Google Play Store.</p>
                 </div>
                 
-                <div class="faq-item" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
+                <div class="faq-item animate-on-scroll" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
                     <h3 style="font-size: 20px; margin-bottom: 10px; color: var(--dark-text); font-weight: 600;">How does Mentari compare to other mental health apps?</h3>
                     <p style="color: var(--gray-text); line-height: 1.8;">Unlike many mental health apps that focus solely on meditation, Mentari offers diverse daily challenges, community support, and no ads. We focus on small, actionable steps that create lasting change, making mental wellness achievable for everyone.</p>
                 </div>
                 
-                <div class="faq-item" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
+                <div class="faq-item animate-on-scroll" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
                     <h3 style="font-size: 20px; margin-bottom: 10px; color: var(--dark-text); font-weight: 600;">Can I use Mentari if I've never done mindfulness or wellness practices before?</h3>
                     <p style="color: var(--gray-text); line-height: 1.8;">Absolutely! Mentari is designed for beginners and experienced practitioners alike. Our challenges are simple, bite-sized, and come with guidance to help you understand why each activity matters and how to get the most from it.</p>
                 </div>
 
-                <div class="faq-item" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
+                <div class="faq-item animate-on-scroll" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
                     <h3 style="font-size: 20px; margin-bottom: 10px; color: var(--dark-text); font-weight: 600;">Do I need to complete challenges every day?</h3>
                     <p style="color: var(--gray-text); line-height: 1.8;">Not at all! Mentari is designed to be flexible and fit your lifestyle. While building a daily habit can be beneficial, you can use the app at your own pace. There's no pressure - just support when you need it.</p>
                 </div>
 
-                <div class="faq-item" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
+                <div class="faq-item animate-on-scroll" style="margin-bottom: 25px; padding: 25px; background-color: var(--light-bg); border-radius: 15px; border-left: 4px solid var(--primary-color);">
                     <h3 style="font-size: 20px; margin-bottom: 10px; color: var(--dark-text); font-weight: 600;">How long does each challenge take?</h3>
                     <p style="color: var(--gray-text); line-height: 1.8;">Most challenges take between 2-15 minutes to complete. We believe in making mental wellness accessible through small, manageable tasks that fit into your busy day.</p>
                 </div>
@@ -1194,9 +1264,9 @@
 
     <section id="community" class="community">
         <div class="container">
-            <h2 class="section-title">Join the Mentari Movement</h2>
-            <p class="section-subtitle">Follow us for daily inspiration and community stories</p>
-            <div class="social-icons">
+            <h2 class="section-title animate-on-scroll">Join the Mentari Movement</h2>
+            <p class="section-subtitle animate-on-scroll">Follow us for daily inspiration and community stories</p>
+            <div class="social-icons animate-on-scroll">
                 <a href="https://www.instagram.com/mentari.app/" aria-label="Mentari Instagram">
                     <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Instagram_svg-48.png" alt="Follow Mentari on Instagram">
                 </a>
@@ -1295,6 +1365,30 @@
             if (e.target === this) {
                 this.style.display = 'none';
             }
+        });
+
+        // Scroll animations with Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-visible');
+                    // Optional: stop observing once animated
+                    // observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        // Observe all elements with animation classes
+        const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-fade-in, .animate-slide-left, .animate-slide-right, .animate-scale');
+        animatedElements.forEach(element => {
+            observer.observe(element);
         });
     </script>
 </body>
